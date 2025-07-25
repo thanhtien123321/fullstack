@@ -1,6 +1,7 @@
 // controllers/OrderController.js
 const Order = require('../models/OrderProduct');
-const Cart = require('../models/CartModel'); // ✅ Thêm dòng này
+const Cart = require('../models/CartModel'); 
+//tạo đơn hàng mới từ giỏ hàng hiện tại 
 const createOrder = async (req, res) => {
   console.log("✅ Dữ liệu đơn hàng gửi lên:", req.body);
 
@@ -41,7 +42,7 @@ const createOrder = async (req, res) => {
 
     const savedOrder = await newOrder.save();
 
-    // ✅ Sau khi lưu đơn hàng xong thì xoá giỏ hàng của user
+   // sau khi đặt xong thì xóa 
     const cart = await Cart.findOne({ user: req.user.id });
     if (cart) {
       cart.orderItems = [];
@@ -62,7 +63,7 @@ const createOrder = async (req, res) => {
   }
 };
 
-// Trong OrderController.js
+// lấy đơn hàng cho admin
 const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find().populate('user', 'email name');

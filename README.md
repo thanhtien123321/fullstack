@@ -90,7 +90,7 @@ thì sản phẩm được đặt nhưng hiện chưa có cách để admin bi�
 
 ## Nguồn tham khảo
 Dự án này được tham khảo dựa theo tutorial của https://youtu.be/IIoW2IhKWmE?si=BWaGQWl_qxz_W11q
-( không làm theo 100% video )
+
 
 ## Công cụ hỗ trợ 
 ChatGPT , Blackbox

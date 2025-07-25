@@ -1,6 +1,6 @@
 const Cart = require('../models/CartModel');
 
-// ✅ Lấy giỏ hàng theo user hiện tại
+// Lấy giỏ hàng theo từng user hiện tại
 const getCartByUser = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -17,7 +17,7 @@ const getCartByUser = async (req, res) => {
   }
 };
 
-// ✅ Cập nhật giỏ hàng: thêm/sửa/xoá sản phẩm
+
 const updateCart = async (req, res) => {
   try {
     const userId = req.user.id;

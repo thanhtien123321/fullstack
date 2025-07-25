@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
-
+//kiểm tra phải admin k 
 const authMiddleWare = (req, res, next) => {
   const authHeader = req.headers.token;
 
